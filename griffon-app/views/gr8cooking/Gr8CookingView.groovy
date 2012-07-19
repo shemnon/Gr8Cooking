@@ -1,5 +1,7 @@
 package gr8cooking
 
+import com.javafx.experiments.scenicview.ScenicView
+
 def items = [
 //        circle(100, fill: GROOVYBLUE),
 //        circle(100, fill: GROOVYBLUE),
@@ -44,10 +46,11 @@ def items = [
 ]
 
 application(title: 'Gr8Cooking', sizeToScene: true, centerOnScreen: true) {
-    scene(fill: black, width: 800, height: 600) {
+    myScene = scene(fill: black, width: 800, height: 600) {
 
 
 
         node(new DisplayShelf(items))
     }
+    ScenicView.show(myScene)
 }

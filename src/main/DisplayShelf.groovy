@@ -17,10 +17,9 @@ import javafx.scene.layout.StackPane
 import javafx.scene.shape.Rectangle
 import javafx.util.Duration
 
-//import groovyf
 
 /**
- * A ui control which displays a browsable display shelf of nodes
+ * A ui control which displays a browse able display shelf of nodes
  */
 public class DisplayShelf extends Region {
     private static final Duration DURATION = Duration.millis(500);
@@ -58,6 +57,9 @@ public class DisplayShelf extends Region {
 
         // update
         update();
+        left.id = "Left"
+        center.id = "Center"
+        right.id = "Right"
     }
 
     @Override protected void layoutChildren() {
