@@ -1,5 +1,7 @@
 package gr8cooking
 
+import griffon.transform.Threading
+
 class Gr8CookingController {
     def model
     def view
@@ -14,5 +16,20 @@ class Gr8CookingController {
 
     def anAction = { evt = null ->
         // this is how you define an action closure that is called from a view
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def show() {
+        view.presentation.show()
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def next() {
+        view.deck.shift(-1)
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def previous() {
+        view.deck.shift(1)
     }
 }

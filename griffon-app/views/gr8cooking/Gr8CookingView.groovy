@@ -3,10 +3,6 @@ package gr8cooking
 import com.javafx.experiments.scenicview.ScenicView
 
 def items = [
-//        circle(100, fill: GROOVYBLUE),
-//        circle(100, fill: GROOVYBLUE),
-//        circle(100, fill: GROOVYBLUE),
-//        circle(100, fill: GROOVYBLUE),
         hbox(padding: 80, style:'-fx-background-color: groovyblue; -fx-border-color: blue;') {
             text(text: "Java", font: "80pt sanserif") {
                 fill linearGradient(endX: 0, stops: [[0, orange], [1, chocolate]])
@@ -45,12 +41,8 @@ def items = [
         },
 ]
 
-application(title: 'Gr8Cooking', sizeToScene: true, centerOnScreen: true) {
+stage(title: 'Gr8Cooking', id:'presentation', primary:false) {
     myScene = scene(fill: black, width: 800, height: 600) {
-
-
-
-        node(new DisplayShelf(items))
+        deck = node(new DisplayShelf(items))
     }
-    ScenicView.show(myScene)
 }

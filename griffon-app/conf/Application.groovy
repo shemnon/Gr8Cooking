@@ -1,6 +1,6 @@
 application {
     title = 'Gr8Cooking'
-    startupGroups = ['gr8Cooking']
+    startupGroups = ['presenterMonitor']
 
     // Should Griffon exit when no Griffon created frames are showing?
     autoShutdown = true
@@ -9,6 +9,13 @@ application {
     //frameClass = 'javax.swing.JFrame'
 }
 mvcGroups {
+    // MVC Group for "presenterMonitor"
+    'presenterMonitor' {
+        model      = 'gr8cooking.PresenterMonitorModel'
+        view       = 'gr8cooking.PresenterMonitorView'
+        controller = 'gr8cooking.PresenterMonitorController'
+    }
+
     // MVC Group for "gr8Cooking"
     'gr8Cooking' {
         model      = 'gr8cooking.Gr8CookingModel'
