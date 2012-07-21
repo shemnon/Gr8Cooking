@@ -1,19 +1,42 @@
 package gr8cooking
 
+import org.codehaus.griffon.runtime.util.GriffonApplicationHelper
+
 class PresenterMonitorController {
     def model
     def view
 
     def startPresentation = { evt = null ->
-        ApplicationHolder.application.createMVCGroup('gr8Cooking')
-        ApplicationHolder.application.controllers.gr8Cooking.show()
+        if (model.deckController == null) {
+            def (m, v, c) = app.createMVCGroup('gr8Cooking')
+            model.deckController = c
+        }
+        model.deckController.show()
         model.running = true
     }
 
+    def stopPresentation = { evt = null ->
+        if (model.deckController) {
+            model.deckController.hide()
+        }
+        model.running = false
+    }
+
+    def exit = {evt = null ->
+        javafx.application.Platform.exit()
+    }
+
     def nextSlide = { evt = null ->
-        ApplicationHolder.application.controllers.gr8Cooking.next()
+        model.deckController.next()
     }
     def previousSlide = { evt = null ->
-        ApplicationHolder.application.controllers.gr8Cooking.previous()
+        model.deckController.previous()
+    }
+
+    def zoomIn = { evt = null ->
+        model.deckController.zoomIn()
+    }
+    def zoomOut = { evt = null ->
+        model.deckController.zoomOut()
     }
 }

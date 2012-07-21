@@ -26,6 +26,7 @@ public class DisplayShelf extends Region {
     private static final Interpolator INTERPOLATOR = Interpolator.EASE_BOTH;
     private static final double SPACING = 50;
     private static final double SCALE_SMALL = 0.7;
+    private static final int SPILLOVER = 8;
     private List<PerspectiveNode> items;
     private StackPane left = new StackPane();
     private StackPane center = new StackPane();
@@ -40,8 +41,16 @@ public class DisplayShelf extends Region {
                 " black 60, #141414 60.1%, black 100%);";
         // create items
         items = [];
+
         nodes.each {Node node ->
-            items << new PerspectiveNode(node);
+            PerspectiveNode that = new PerspectiveNode(node);
+
+            that.translateX = 4000
+            that.scaleX = SCALE_SMALL
+            that.scaleY = SCALE_SMALL
+            that.angle = 135
+
+            items << that
         }
         // create content
         children.addAll(left, right, center);
@@ -77,21 +86,24 @@ public class DisplayShelf extends Region {
     private void update() {
         // move items to new homes in groups
         [left, center, right].each { it.children.clear()}
-        for (int i = 0; i < centerIndex; i++) {
-            left.children.add(items[i]);
+        int max = Math.min(SPILLOVER, centerIndex)
+        if (max > 0) {
+            left.children.addAll(items[(centerIndex-max)..(centerIndex-1)])
         }
-        center.children.add(items[centerIndex]);
-        for (int i = items.size() - 1; i > centerIndex; i--) {
-            right.children.add(items[i]);
+        center.children.addAll(items[centerIndex])
+        max = Math.min(items.size()-1, centerIndex+SPILLOVER)
+        if (max < items.size()) {
+            right.children.addAll(items[max..(centerIndex+1)])
         }
         // stop old timeline if there is one running
         if (timeline != null) timeline.stop();
+        items*.visible = false
         // add keyframes for left items
         def keyFrames = []
         PerspectiveNode centerItem = items[centerIndex];
         double offset = centerItem.width / 2 + 10
         for (int i = 0; i < left.children.size(); i++) {
-            final PerspectiveNode it = items[i];
+            final PerspectiveNode it = left.children[i];
             double newX = -left.children.size() *
                     SPACING + SPACING * i - offset;
             keyFrames << new KeyFrame(DURATION,
@@ -99,6 +111,7 @@ public class DisplayShelf extends Region {
                     new KeyValue(it.scaleXProperty(), SCALE_SMALL, INTERPOLATOR),
                     new KeyValue(it.scaleYProperty(), SCALE_SMALL, INTERPOLATOR),
                     new KeyValue(it.angleProperty, 45.0, INTERPOLATOR))
+            it.visible = true
         }
         // add keyframe for center item
         keyFrames << new KeyFrame(DURATION,
@@ -106,16 +119,17 @@ public class DisplayShelf extends Region {
                 new KeyValue(centerItem.scaleXProperty(), 1.0, INTERPOLATOR),
                 new KeyValue(centerItem.scaleYProperty(), 1.0, INTERPOLATOR),
                 new KeyValue(centerItem.angleProperty, 90.0, INTERPOLATOR))
+        centerItem.visible = true
         // add keyframes for right items
-        for (int i = 0; i < right.children.size(); i++) {
-            final PerspectiveNode it = items[items.size() - i - 1];
-            final double newX = right.children.size() *
-                    SPACING - SPACING * i + offset;
+        for (int i = right.children.size() - 1; i >= 0; i--) {
+            final PerspectiveNode it = right.children[i];
+            final double newX = SPACING * right.children.size() - SPACING * i + offset;
             keyFrames << new KeyFrame(DURATION,
                     new KeyValue(it.translateXProperty(), newX, INTERPOLATOR),
                     new KeyValue(it.scaleXProperty(), SCALE_SMALL, INTERPOLATOR),
                     new KeyValue(it.scaleYProperty(), SCALE_SMALL, INTERPOLATOR),
                     new KeyValue(it.angleProperty, 135.0, INTERPOLATOR))
+            it.visible = true
         }
         // play animation
         // create timeline to animate to new positions

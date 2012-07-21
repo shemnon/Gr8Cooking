@@ -24,6 +24,11 @@ class Gr8CookingController {
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def hide() {
+        view.presentation.hide()
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     def next() {
         view.deck.shift(-1)
     }
@@ -31,5 +36,21 @@ class Gr8CookingController {
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     def previous() {
         view.deck.shift(1)
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def zoomIn() {
+        view.deck.scaleX /= 1.1
+        view.deck.scaleY /= 1.1
+        view.presentation.width /= 1.1
+        view.presentation.height /= 1.1
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def zoomOut() {
+        view.deck.scaleX *= 1.1
+        view.deck.scaleY *= 1.1
+        view.presentation.width *= 1.1
+        view.presentation.height *= 1.1
     }
 }
