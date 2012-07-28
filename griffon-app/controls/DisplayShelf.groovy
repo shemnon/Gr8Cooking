@@ -92,7 +92,7 @@ public class DisplayShelf extends Region {
         }
         center.children.addAll(items[centerIndex])
         max = Math.min(items.size()-1, centerIndex+SPILLOVER)
-        if (max < items.size()) {
+        if (max < items.size() && ((centerIndex+1) < items.size())) {
             right.children.addAll(items[max..(centerIndex+1)])
         }
         // stop old timeline if there is one running
@@ -162,6 +162,10 @@ public class DisplayShelf extends Region {
         if (centerIndex >= items.size() - 1 && shiftAmount < 0) return;
         centerIndex -= shiftAmount;
         update();
+    }
+
+    Parent getCenteredItem() {
+        return center.children[0]
     }
 }
 
