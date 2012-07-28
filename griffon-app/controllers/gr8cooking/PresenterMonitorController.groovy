@@ -1,7 +1,5 @@
 package gr8cooking
 
-import org.codehaus.griffon.runtime.util.GriffonApplicationHelper
-
 class PresenterMonitorController {
     def model
     def view
@@ -24,6 +22,7 @@ class PresenterMonitorController {
 
     def exit = {evt = null ->
         javafx.application.Platform.exit()
+        System.exit(0) // Mac 7u6ea hack
     }
 
     def nextSlide = { evt = null ->
@@ -38,5 +37,13 @@ class PresenterMonitorController {
     }
     def zoomOut = { evt = null ->
         model.deckController.zoomOut()
+    }
+
+    def inspectSlide = { evt = null ->
+        model.deckController.inspectSlide()
+    }
+
+    def applyStyle = { evt = null ->
+        model.deckController?.applyStyle(view.styleCombo.value)
     }
 }

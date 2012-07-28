@@ -1,21 +1,14 @@
 package gr8cooking
 
 import griffon.transform.Threading
+import com.javafx.experiments.scenicview.ScenicView
 
 class Gr8CookingController {
     def model
     def view
 
-    // void mvcGroupInit(Map args) {
-    //    // this method is called after model and view are injected
-    // }
-
-    // void mvcGroupDestroy() {
-    //    // this method is called when the group is destroyed
-    // }
-
-    def anAction = { evt = null ->
-        // this is how you define an action closure that is called from a view
+    void mvcGroupInit(Map<String, Object> args) {
+        applyStyle('Gr8ConfUS.css')
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
@@ -53,4 +46,22 @@ class Gr8CookingController {
         view.presentation.width *= 1.1
         view.presentation.height *= 1.1
     }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def inspectSlide() {
+        // buggy, inspect all
+        //ScenicView.show(view.deck.centeredItem)
+        ScenicView.show(view.myScene)
+    }
+
+    @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
+    def applyStyle(def style) {
+        println 'Applying Style'
+        println view.myScene.stylesheets
+        view.myScene.stylesheets.clear()
+        println view.myScene.stylesheets
+        view.myScene.stylesheets << style
+        println view.myScene.stylesheets
+    }
+
 }

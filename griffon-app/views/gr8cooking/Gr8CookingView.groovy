@@ -1,32 +1,25 @@
 package gr8cooking
 
-import com.javafx.experiments.scenicview.ScenicView
 import javafx.stage.StageStyle
 
-def items = []
-(1..100).each { n ->
-    javafx.scene.Node fxnode = stackPane(id: "Pane $n") {
-        rectangle(width: 640, height: 480, fill:GROOVYBLUE, stroke: blue)
-        hbox(padding: 120) {
-            text(text: "Java", font: "80pt sanserif") {
-                fill linearGradient(endX: 0, stops: [[0, orange], [1, chocolate]])
-            }
-            text(text: "FX", font: "80pt sanserif") {
-                fill linearGradient(endX: 0, stops: [[0, cyan], [1, dodgerblue]])
-                effect dropShadow(color: dodgerblue, radius: 25, spread: 0.25)
-            }
-            text(text: "$n", font: "80pt sanserif") {
-                fill linearGradient(endX: 0, stops: [[0, yellow], [1, green]])
-                effect dropShadow(color: green, radius: 25, spread: 0.25)
-            }
-        }
+def slides = []
+
+def slideNames = [
+        Title,
+        AboutMe,
+]
+
+slideNames.each { slideName ->
+    if (app.views.containsKey(slideName)) {
+        slides << app.views[slideName]
+    } else {
+        slides << build(slideName)
     }
-    items << fxnode
+
 }
 
-
-stage(title: 'Gr8Cooking', id: 'presentation', primary: false, style: StageStyle.TRANSPARENT) {
+stage(title: 'Gr8Cooking', id: 'presentation', primary: false, centerOnScreen: true) {
     myScene = scene(fill: black, width: 1024, height: 768) {
-        deck = node(new DisplayShelf(items))
+        deck = node(new DisplayShelf(slides))
     }
 }
