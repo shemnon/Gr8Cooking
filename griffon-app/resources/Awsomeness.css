@@ -1,0 +1,25 @@
+
+.background {
+ -fx-fill: red;
+ -fx-stroke: yellow;
+}
+
+.title-slide {
+  -fx-stroke: white;
+}
+
+.maintitle, .subtitle {
+  -fx-text-fill: green;
+  -fx-wrap-text: true;
+  -fx-text-alignment: center;
+  -fx-translate-y: -100;
+  -fx-font: 20pt serif;
+}
+
+.maintitle {
+ -fx-translate-y : -80;
+}
+
+.subtitle {
+ -fx-translate-y : 80;
+}
