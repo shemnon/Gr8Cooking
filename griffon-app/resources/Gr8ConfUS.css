@@ -1,5 +1,5 @@
 
-.background, .title {
+.background, .title, .slide {
  -fx-background-color: groovyblue;
  -fx-stroke: blue;
  -fx-background-image: url('gr8uslogo_reasonably_small.png');
@@ -8,7 +8,7 @@
  -fx-background-repeat: no-repeat;
 }
 
-.background {
+.filler {
  visibility: hidden;
 }
 
@@ -16,13 +16,32 @@
   -fx-stroke: red;
 }
 
-.maintitle, .subtitle {
+.maintitle, .subtitle, .content-title, .content-content {
   -fx-text-fill: white;
   -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 0,0,2,2 );
   -fx-wrap-text: true;
+}
+
+.content-title, .content-content {
+  -fx-text-alignment: left;
+ -fx-wrap-text:true;
+ -fx-label-padding: 20;
+}
+
+.maintitle, .subtitle {
   -fx-text-alignment: center;
-  -fx-translate-y: -100;
+}
+
+.maintitle, .subtitle, .content-title {
   -fx-font: bold 48pt arial, serif;
+}
+
+.content-content {
+  -fx-font: bold 30pt arial, serif;
+}
+
+.content-content {
+ -fx-text-align: top left;
 }
 
 .maintitle {

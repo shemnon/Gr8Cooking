@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane id="StackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="104.474609375" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bloom">
+                  <font>
+                    <Font size="24.0" fx:id="x1" />
+                  </font>
+                </Text>
+              </children>
+              <effect>
+                <Bloom />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="104.474609375" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Box Blur" />
+              </children>
+              <effect>
+                <BoxBlur />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="157.9931640625" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Color Adjust" />
+              </children>
+              <effect>
+                <ColorAdjust hue="0.5555555555555556" />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="165.616943359375">
+                  <effect>
+                    <DisplacementMap>
+                      <mapData>
+                        <FloatMap />
+                      </mapData>
+                    </DisplacementMap>
+                  </effect>
+                </Rectangle>
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Displacement" />
+              </children>
+              <effect>
+                <DisplacementMap offsetX="0.1" offsetY="0.1" scaleX="0.9" scaleY="0.5">
+                  <mapData>
+                    <FloatMap />
+                  </mapData>
+                </DisplacementMap>
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="165.616943359375" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Drop Shadow" />
+              </children>
+              <effect>
+                <DropShadow offsetX="4.0" offsetY="4.0" spread="0.1746031746031746" />
+              </effect>
+            </StackPane>
+          </children>
+        </VBox>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="168.80841064453125" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Gaussian Blur" />
+              </children>
+              <effect>
+                <GaussianBlur radius="5.0" />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="104.474609375" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Glow" />
+              </children>
+              <effect>
+                <Glow level="0.854140127388535" />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="168.808349609375" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Inner Shadow" />
+              </children>
+              <effect>
+                <InnerShadow />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="104.474609375" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Lighting" />
+              </children>
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant />
+                  </light>
+                </Lighting>
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="145.51171875" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Motion Blur" />
+              </children>
+              <effect>
+                <MotionBlur />
+              </effect>
+            </StackPane>
+          </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+          <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="104.474609375" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Multi" />
+              </children>
+              <effect>
+                <MotionBlur>
+                  <input>
+                    <Reflection topOffset="-30.0">
+                      <input>
+                        <Glow level="1.0" />
+                      </input>
+                    </Reflection>
+                  </input>
+                </MotionBlur>
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="134.015625" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Perspective" />
+              </children>
+              <effect>
+                <PerspectiveTransform llx="10.0" lly="60.0" lrx="130.0" lry="80.0" ulx="10.0" uly="10.0" urx="130.0" />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="131.16796875" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Reflection" />
+              </children>
+              <effect>
+                <Reflection fraction="0.6" topOffset="-30.0" />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="134.015625" />
+                <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepia Tone" />
+              </children>
+              <effect>
+                <SepiaTone />
+              </effect>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="42.69921875" stroke="BLACK" strokeType="INSIDE" width="104.474609375">
+                  <effect>
+                    <Shadow />
+                  </effect>
+                </Rectangle>
+                <Text fill="WHITE" font="$x1" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Shadow" />
+              </children>
+            </StackPane>
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+  </children>
+  <prefHeight>
+    <Long fx:value="400" />
+  </prefHeight>
+</StackPane>

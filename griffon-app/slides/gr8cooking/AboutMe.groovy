@@ -1,16 +1,22 @@
-stackPane(id: "About Me") {
-    rectangle(width: 640, height: 480, fill: GROOVYBLUE, stroke: blue)
-    hbox(padding: 120) {
-        text(text: "Java", font: "80pt sanserif") {
-            fill linearGradient(endX: 0, stops: [[0, orange], [1, chocolate]])
-        }
-        text(text: "FX", font: "80pt sanserif") {
-            fill linearGradient(endX: 0, stops: [[0, cyan], [1, dodgerblue]])
-            effect dropShadow(color: dodgerblue, radius: 25, spread: 0.25)
-        }
-        text(text: "Magnets!", font: "80pt sanserif") {
-            fill linearGradient(endX: 0, stops: [[0, yellow], [1, green]])
-            effect dropShadow(color: green, radius: 25, spread: 0.25)
-        }
+
+stackPane(styleClass: 'slide', maxWidth: 640, maxHeight: 480, width: 640, height: 480, minWidth:640, minHeight: 480) {
+    rectangle(styleClass: 'filler', width: 640, height: 480)
+
+    vbox width: 640, {
+        label "About Danno Ferrin", styleClass: 'content-title'
+
+        label vgrow: 'always', styleClass: "content-content",
+                """\u2022 First Contributed to Groovy by
+  filling in gaps in the SwingBuilder
+\u2022 Wrote First AST Transformations
+    \u2022 @Bindable and @Vetoable
+\u2022 @Grab was a fun weekend hack
+\u2022 Co-founded Griffon with James Williams
+  and Andres Almiray
+\u2022 Works at Intelligent Software Solutions
+  in Colorado Springs, CO"""
+
+
     }
+
 }
