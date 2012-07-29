@@ -13,7 +13,7 @@ class Gr8CookingController {
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     def show() {
-        view.presentation.show()
+        view.presentation?.show()
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
@@ -49,19 +49,15 @@ class Gr8CookingController {
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     def inspectSlide() {
-        // buggy, inspect all
+        // buggy, inspect all instead
         //ScenicView.show(view.deck.centeredItem)
         ScenicView.show(view.myScene)
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     def applyStyle(def style) {
-        println 'Applying Style'
-        println view.myScene.stylesheets
         view.myScene.stylesheets.clear()
-        println view.myScene.stylesheets
         view.myScene.stylesheets << style
-        println view.myScene.stylesheets
     }
 
 }
