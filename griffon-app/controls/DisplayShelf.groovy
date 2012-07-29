@@ -210,7 +210,7 @@ public class PerspectiveNode extends Parent {
         } as ChangeListener<Double>)
         angle = 45
         preSize(view.prefWidth(-1), view.prefHeight(-1))
-        view.effect = ReflectionBuilder.create().fraction(REFLECTION_SIZE).build();
+        view.effect = ReflectionBuilder.create().topOffset(10).fraction(REFLECTION_SIZE).build();
         effect = pTransform;
         children.addAll(view);
     }
