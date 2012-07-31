@@ -10,222 +10,445 @@
 <?import javafx.scene.paint.*?>
 
 <ScrollPane xmlns:fx="http://javafx.com/fxml">
-  <content>
-    <VBox>
-      <children>
-        <CheckBox mnemonicParsing="false" text="CheckBox" />
-        <Button mnemonicParsing="false" text="Button" />
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <ChoiceBox>
-              <items>
-                <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Item 1" />
-                  <String fx:value="Item 2" />
-                  <String fx:value="Item 3" />
-                </FXCollections>
-              </items>
-            </ChoiceBox>
-            <Label text="Choice Box" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <ColorPicker />
-            <Label text="Color Picker" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <ComboBox editable="true" prefWidth="107.0" promptText="Combo Box">
-          <items>
-            <FXCollections fx:factory="observableArrayList">
-              <String fx:value="Item 1" />
-              <String fx:value="Item 2" />
-              <String fx:value="Item 3" />
-            </FXCollections>
-          </items>
-        </ComboBox>
-        <Hyperlink text="Hyperlink" />
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                <Image url="@gr8uslogo_with_tagline.png" preserveRatio="false" smooth="false" />
-              </image>
-            </ImageView>
-            <Label text="Image View" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <Label text="Label" />
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <ListView prefHeight="200.0" prefWidth="200.0" />
-            <Label text="List View" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <MenuBar>
-          <menus>
-            <Menu mnemonicParsing="false" text="File">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Close" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Delete" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-              <items>
-                <MenuItem mnemonicParsing="false" text="About" />
-              </items>
-            </Menu>
-          </menus>
-        </MenuBar>
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <ProgressBar prefWidth="200.0" progress="0.37" />
-            <Label text="Progress Bar" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <PasswordField prefWidth="200.0" promptText="Password Field" />
-        <RadioButton mnemonicParsing="false" text="RadioButton" />
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <Separator prefWidth="200.0" />
-            <Separator orientation="VERTICAL">
-              <prefHeight>
-                <Long fx:value="20" />
-              </prefHeight>
-            </Separator>
-            <Label text="Separators" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
-            <MenuItem mnemonicParsing="false" text="Action 2" />
-          </items>
-        </SplitMenuButton>
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <TableView prefHeight="200.0" prefWidth="200.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="Column X" />
-                <TableColumn prefWidth="75.0" text="Column X" />
-              </columns>
-            </TableView>
-            <Label text="TableView" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <TextField prefWidth="200.0" text="TextField" />
-        <TextArea prefWidth="200.0" text="TextArea" wrapText="true" />
-        <HBox alignment="CENTER_LEFT">
-          <children>
-            <TreeView prefHeight="200.0" prefWidth="200.0" />
-            <Label text="Tree View" />
-          </children>
-          <prefHeight>
-            <Long fx:value="-1" />
-          </prefHeight>
-          <prefWidth>
-            <Long fx:value="-1" />
-          </prefWidth>
-          <spacing>
-            <Long fx:value="5" />
-          </spacing>
-        </HBox>
-        <ToggleButton mnemonicParsing="false" text="ToggleButton" />
-      </children>
-      <padding>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </padding>
-      <prefHeight>
-        <Long fx:value="-1" />
-      </prefHeight>
-      <prefWidth>
-        <Long fx:value="-1" />
-      </prefWidth>
-      <spacing>
-        <Long fx:value="10" />
-      </spacing>
-    </VBox>
-  </content>
-  <maxWidth>
-    <Long fx:value="-1" />
-  </maxWidth>
-  <minHeight>
-    <Long fx:value="310" />
-  </minHeight>
-  <minWidth>
-    <Long fx:value="310" />
-  </minWidth>
-  <prefHeight>
-    <Long fx:value="310" />
-  </prefHeight>
-  <prefWidth>
-    <Long fx:value="310" />
-  </prefWidth>
+    <content>
+        <VBox>
+            <children>
+                <CheckBox mnemonicParsing="false" text="CheckBox"/>
+                <Button mnemonicParsing="false" text="Button"/>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <ChoiceBox>
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Item 1"/>
+                                    <String fx:value="Item 2"/>
+                                    <String fx:value="Item 3"/>
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                        <Label text="Choice Box"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <ColorPicker/>
+                        <Label text="Color Picker"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <ComboBox editable="true" prefWidth="107.0" promptText="Combo Box">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Item 1"/>
+                            <String fx:value="Item 2"/>
+                            <String fx:value="Item 3"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Hyperlink text="Hyperlink"/>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@gr8uslogo_with_tagline.png" preserveRatio="false" smooth="false"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Image View"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <Label text="Label"/>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <ListView prefHeight="200.0" prefWidth="200.0"/>
+                        <Label text="List View"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <PasswordField prefWidth="200.0" promptText="Password Field"/>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <ProgressBar prefWidth="200.0" progress="0.37"/>
+                        <Label text="Progress Bar"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <ProgressIndicator progress="0.57"/>
+                        <Label text="Progress Bar"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <RadioButton mnemonicParsing="false" text="RadioButton"/>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Separator prefWidth="200.0"/>
+                        <Separator orientation="VERTICAL">
+                            <prefHeight>
+                                <Long fx:value="20"/>
+                            </prefHeight>
+                        </Separator>
+                        <Label text="Separators"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1"/>
+                        <MenuItem mnemonicParsing="false" text="Action 2"/>
+                    </items>
+                </SplitMenuButton>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="Column X"/>
+                                <TableColumn prefWidth="75.0" text="Column X"/>
+                            </columns>
+                        </TableView>
+                        <Label text="TableView"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <TextField prefWidth="200.0" text="TextField"/>
+                <TextArea prefWidth="200.0" text="TextArea" wrapText="true"/>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <TreeView prefHeight="200.0" prefWidth="200.0">
+                            <TreeItem value="Root">
+                                <children>
+                                    <TreeItem value="One">
+                                        <children>
+                                            <TreeItem value="Red">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                            <TreeItem value="Yellow">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                            <TreeItem value="Blue">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                        </children>
+                                    </TreeItem>
+                                    <TreeItem value="Two">
+                                        <children>
+
+                                            <TreeItem value="Red">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                            <TreeItem value="Yellow">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                            <TreeItem value="Blue">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                        </children>
+                                    </TreeItem>
+                                    <TreeItem value="Three">
+                                        <children>
+
+                                            <TreeItem value="Red">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                            <TreeItem value="Yellow">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                            <TreeItem value="Blue">
+                                                <children>
+
+                                                    <TreeItem value="Gold">
+                                                        <value>
+                                                            <CheckBox text="Aardvark"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Silver">
+                                                        <value>
+                                                            <CheckBox text="Bear"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                    <TreeItem value="Bronze">
+                                                        <value>
+                                                            <CheckBox text="Cougar"/>
+                                                        </value>
+                                                    </TreeItem>
+                                                </children>
+
+                                            </TreeItem>
+                                        </children>
+                                    </TreeItem>
+                                </children>
+                            </TreeItem>
+                        </TreeView>
+                        <Label text="Tree View"/>
+                    </children>
+                    <prefHeight>
+                        <Long fx:value="-1"/>
+                    </prefHeight>
+                    <prefWidth>
+                        <Long fx:value="-1"/>
+                    </prefWidth>
+                    <spacing>
+                        <Long fx:value="5"/>
+                    </spacing>
+                </HBox>
+                <ToggleButton mnemonicParsing="false" text="ToggleButton"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <prefHeight>
+                <Long fx:value="-1"/>
+            </prefHeight>
+            <prefWidth>
+                <Long fx:value="-1"/>
+            </prefWidth>
+            <spacing>
+                <Long fx:value="10"/>
+            </spacing>
+        </VBox>
+    </content>
+    <maxWidth>
+        <Long fx:value="-1"/>
+    </maxWidth>
+    <minHeight>
+        <Long fx:value="310"/>
+    </minHeight>
+    <minWidth>
+        <Long fx:value="310"/>
+    </minWidth>
+    <prefHeight>
+        <Long fx:value="310"/>
+    </prefHeight>
+    <prefWidth>
+        <Long fx:value="310"/>
+    </prefWidth>
 </ScrollPane>
