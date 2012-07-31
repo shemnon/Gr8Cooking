@@ -1,25 +1,63 @@
 
-.background {
- -fx-fill: red;
+.background, .title, .slide {
+ -fx-background-color: red;
  -fx-stroke: yellow;
+ -fx-background-image: url('gr8uslogo_reasonably_small.png');
+ -fx-background-position: 580px 420px;
+ -fx-background-size: 48px 48px;
+ -fx-background-repeat: no-repeat;
+}
+
+.filler {
+ visibility: hidden;
 }
 
 .title-slide {
-  -fx-stroke: white;
+  -fx-stroke: green;
+}
+
+.maintitle, .subtitle, .content-title, .content-content {
+  -fx-text-fill: green;
+  -fx-wrap-text: true;
+}
+
+.content-title, .content-content {
+  -fx-text-alignment: left;
+ -fx-wrap-text:true;
+ -fx-label-padding: 20;
 }
 
 .maintitle, .subtitle {
-  -fx-text-fill: green;
-  -fx-wrap-text: true;
   -fx-text-alignment: center;
-  -fx-translate-y: -100;
-  -fx-font: 20pt serif;
+}
+
+.maintitle, .subtitle, .content-title {
+  -fx-font: bold 40pt herculanum, serif;
+}
+
+.content-content {
+  -fx-font: bold 24pt chalkduster, cursive;
+}
+.effectText {
+ -fx-font-size: 24pt;
+}
+
+.effectBox {
+ -fx-background-color: pink;
+ -fx-border-color: black;
+ -fx-padding: 10, 20, 10, 20;
+}
+
+
+
+.content-content {
+ -fx-text-align: top left;
 }
 
 .maintitle {
- -fx-translate-y : -80;
+ -fx-translate-y : 80;
 }
 
 .subtitle {
- -fx-translate-y : 80;
+ -fx-translate-y : -80;
 }
