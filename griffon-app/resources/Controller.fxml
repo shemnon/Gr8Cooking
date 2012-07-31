@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.9999000000025" prefWidth="170.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <Button fx:id="stopButton" layoutX="2.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_stop_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_stop_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="zoomOutButton" layoutX="58.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_zoom_out.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_zoom_out.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="ejectButton" layoutX="114.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_eject_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_eject_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="previousButton" layoutX="2.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_rewind_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_rewind_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="playButton" layoutX="58.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_play_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_play_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="nextButton" layoutX="114.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_fastforward_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_fastforward_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="refreshButton" layoutX="2.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_repeat_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_repeat_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="zoomInButton" layoutX="58.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_zoom_in.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_zoom_in.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="inspectButton" layoutX="114.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+      <graphic>
+        <ImageView id="Farm-Fresh_control_equalizer_blue.png">
+          <image>
+            <Image url="@farm-fresh/Farm-Fresh_control_equalizer_blue.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <ComboBox fx:id="stylesheetCombo" editable="true" layoutX="14.0" layoutY="133.0" prefWidth="144.0" promptText="Stylesheet">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ImageView id="gr8uslogo_reasonably_small.png" layoutX="20.0" layoutY="167.0">
+      <image>
+        <Image url="@gr8uslogo_reasonably_small.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>
