@@ -61,3 +61,13 @@
 .subtitle {
  -fx-translate-y : 80;
 }
+
+.presenterButton:hover {
+ -fx-effect: dropshadow( one-pass-box , lightgray , 3 , 0.0 , 3 , 3 );
+}
+
+.presenterButton:pressed {
+ -fx-effect: dropshadow( one-pass-box , lightgray , 3 , 0.0 , 1 , 1 );
+ -fx-translate-x: 2;
+ -fx-translate-y: 2;
+}

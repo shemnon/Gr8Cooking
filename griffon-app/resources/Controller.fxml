@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.9999000000025" prefWidth="170.0" xmlns:fx="http://javafx.com/fxml">
   <children>
-    <Button fx:id="stopButton" layoutX="2.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="stopButton" layoutX="2.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_stop_blue.png">
           <image>
@@ -19,7 +19,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="zoomOutButton" layoutX="58.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="zoomOutButton" layoutX="58.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_zoom_out.png">
           <image>
@@ -28,7 +28,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="ejectButton" layoutX="114.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="ejectButton" layoutX="114.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_eject_blue.png">
           <image>
@@ -37,7 +37,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="previousButton" layoutX="2.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="previousButton" layoutX="2.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_rewind_blue.png">
           <image>
@@ -46,7 +46,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="playButton" layoutX="58.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="playButton" layoutX="58.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_play_blue.png">
           <image>
@@ -55,7 +55,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="nextButton" layoutX="114.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="nextButton" layoutX="114.0" layoutY="46.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_fastforward_blue.png">
           <image>
@@ -64,7 +64,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="refreshButton" layoutX="2.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="refreshButton" layoutX="2.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_repeat_blue.png">
           <image>
@@ -73,7 +73,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="zoomInButton" layoutX="58.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="zoomInButton" layoutX="58.0" layoutY="7.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_zoom_in.png">
           <image>
@@ -82,7 +82,7 @@
         </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="inspectButton" layoutX="114.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;">
+    <Button fx:id="inspectButton" layoutX="114.0" layoutY="85.0" mnemonicParsing="false" style="-fx-border-color: transparent;&#10;-fx-background-color: transparent;&#10;" styleClass="presenterButton">
       <graphic>
         <ImageView id="Farm-Fresh_control_equalizer_blue.png">
           <image>
