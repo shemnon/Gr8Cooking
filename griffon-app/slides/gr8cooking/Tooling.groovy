@@ -3,7 +3,7 @@ stackPane(styleClass: 'slide', maxWidth: 640, maxHeight: 480, width: 640, height
     rectangle(styleClass: 'filler', width: 640, height: 480)
 
     vbox width: 640, {
-        label "Tooling", styleClass: 'content-title'
+        label "Tolling", styleClass: 'content-title'
 
         label vgrow: 'always', styleClass: "content-content",
 """\u2022 Scenic View
