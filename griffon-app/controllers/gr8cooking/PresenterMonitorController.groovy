@@ -44,7 +44,6 @@ class PresenterMonitorController {
     }
 
     def applyStyle = { evt = null ->
-        println model.stylesheet
         model.deckController?.applyStyle(model.stylesheet)
     }
 }
