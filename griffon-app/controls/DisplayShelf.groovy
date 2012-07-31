@@ -65,7 +65,7 @@ public class DisplayShelf extends Region {
         } as EventHandler<KeyEvent>
 
         // update
-        update();
+        update(items.size);
         left.id = "Left"
         center.id = "Center"
         right.id = "Right"
@@ -84,14 +84,18 @@ public class DisplayShelf extends Region {
     }
 
     private void update() {
+        update(SPILLOVER)
+    }
+    private void update(int spillover) {
+
         // move items to new homes in groups
         [left, center, right].each { it.children.clear()}
-        int max = Math.min(SPILLOVER, centerIndex)
+        int max = Math.min(spillover, centerIndex)
         if (max > 0) {
             left.children.addAll(items[(centerIndex-max)..(centerIndex-1)])
         }
         center.children.addAll(items[centerIndex])
-        max = Math.min(items.size()-1, centerIndex+SPILLOVER)
+        max = Math.min(items.size()-1, centerIndex+spillover)
         if (max < items.size() && ((centerIndex+1) < items.size())) {
             right.children.addAll(items[max..(centerIndex+1)])
         }
@@ -186,7 +190,7 @@ public class PerspectiveNode extends Parent {
 
     def preSize(double w, double h) {
         width = w
-        height = h + h * REFLECTION_SIZE
+        height = h + h * REFLECTION_SIZE + 10
         radius_h = w / 2
         back = w / 10
     }
