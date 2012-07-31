@@ -9,6 +9,8 @@ import com.sun.org.apache.xpath.internal.NodeSet
 def slideNames = [
         Title,
         AboutMe,
+        Chopped,
+        Dogfood,
         Agenda,
 
         JavaFX1,

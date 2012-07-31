@@ -40,6 +40,16 @@
   -fx-font: bold 30pt arial, serif;
 }
 
+.effectText {
+ -fx-font-size: 20pt;
+}
+
+.effectBox {
+ -fx-background-color: dodgerblue;
+ -fx-border-color: black;
+ -fx-padding: 5, 20, 5, 20;
+}
+
 .content-content {
  -fx-text-align: top left;
 }
