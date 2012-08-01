@@ -9,7 +9,7 @@ stackPane(styleClass: 'slide', maxWidth: 640, maxHeight: 480, width: 640, height
     vbox width: 640, {
         label "Animation and Transition", styleClass: 'content-title'
 
-        gridPane(hgap: 5, vgap: 10, padding: 25, alignment: "top_center", minHeight: 400, prefHeight: 400, maxHeight:400) {
+        gridPane(hgap: 5, vgap: 10, padding: 25, alignment: "top_center", minHeight: 400, prefHeight: 400, maxHeight: 400) {
             columnConstraints(hgrow: 'always')
             columnConstraints(hgrow: 'never')
             columnConstraints(minWidth: 100, hgrow: 'sometimes')
@@ -19,22 +19,14 @@ stackPane(styleClass: 'slide', maxWidth: 640, maxHeight: 480, width: 640, height
 """\u2022 Timeline: Animations on any property"""
 
             slider id: 'slide', min: 0, max: 100, row: 0, column: 1, width: 150, height: 50
-            timely = timeline(cycleCount: 2, autoReverse: true)
-            ((Timeline)timely).keyFrames <<
-                    new KeyFrame(0.s,
-                            new KeyValue(slide.valueProperty(), 0.0, Interpolator.EASE_BOTH)
-                    )
-            ((Timeline)timely).keyFrames <<
-                    new KeyFrame(4.s,
-                            new KeyValue(slide.valueProperty(), 100, Interpolator.EASE_BOTH))
-//             ,  {
-//                to(0.s) {
-//                    change(slide, 'value') to 0.0 tween EASE_BOTH
-//                }
-//                to(4.s) {
-//                    change(slide, 'value') to 4.0 tween EASE_BOTH
-//                }
-//        }
+            timely = timeline(cycleCount: 2, autoReverse: true) {
+                at(0.s) {
+                    change(slide, 'value') to 0.0 tween EASE_BOTH
+                }
+                at(4.s) {
+                    change(slide, 'value') to 100.0 tween EASE_BOTH
+                }
+            }
             button "Slide", onAction: {timely.play()}, row: 0, column: 2
 
 
