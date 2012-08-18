@@ -118,9 +118,9 @@ deploy {
         }
         icon {
             'default' {
-                name   = 'griffon-icon-64x64.png'
-                width  = '64'
-                height = '64'
+                name   = 'gr8uslogo_reasonably_small.png'
+                width  = '128'
+                height = '128'
             }
             splash {
                 name   = 'griffon.png'
@@ -128,24 +128,24 @@ deploy {
                 height = '123'
             }
             selected {
-                name   = 'griffon-icon-64x64.png'
-                width  = '64'
-                height = '64'
+                name   = 'gr8uslogo_reasonably_small.png'
+                width  = '128'
+                height = '128'
             }
             disabled {
-                name   = 'griffon-icon-64x64.png'
-                width  = '64'
-                height = '64'
+                name   = 'gr8uslogo_reasonably_small.png'
+                width  = '128'
+                height = '128'
             }
             rollover {
-                name   = 'griffon-icon-64x64.png'
-                width  = '64'
-                height = '64'
+                name   = 'gr8uslogo_reasonably_small.png'
+                width  = '128'
+                height = '128'
             }
             shortcut {
-                name   = 'griffon-icon-64x64.png'
-                width  = '64'
-                height = '64'
+                name   = 'gr8uslogo_reasonably_small.png'
+                width  = '128'
+                height = '128'
             }
         }
     }
