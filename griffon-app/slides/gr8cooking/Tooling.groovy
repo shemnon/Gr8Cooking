@@ -3,6 +3,7 @@ stackPane(styleClass: 'slide', maxWidth: 640, maxHeight: 480, width: 640, height
     rectangle(styleClass: 'filler', width: 640, height: 480)
 
     vbox width: 640, {
+        // This mis-speling is intentional.  Use Scenic View to fix it live.
         label "Tolling", styleClass: 'content-title'
 
         label vgrow: 'always', styleClass: "content-content",

@@ -11,8 +11,8 @@ stackPane(styleClass: 'slide', maxWidth: 640, maxHeight: 480, width: 640, height
 \u2022 This is Not Full HTML5/CSS3 Styling
     \u2714 Selectors
     \u2714 Full Cascading Rules
-    \u2714 CSS proeprty Values
-    \u2718 Most HTML proeprties
+    \u2714 CSS property Values
+    \u2718 Most HTML properties
     \u2714 Many JavaFX Properties
 """
 
